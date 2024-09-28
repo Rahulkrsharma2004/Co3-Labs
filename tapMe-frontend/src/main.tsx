@@ -1,9 +1,10 @@
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import App from './App';
+import './index.css'
 
 const client = new ApolloClient({
-  uri: 'YOUR_GRAPHQL_ENDPOINT',
+  uri: 'http://localhost:4000/graphql',
   cache: new InMemoryCache(),
 });
 

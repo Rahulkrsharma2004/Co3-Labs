@@ -22,7 +22,7 @@ const ADD_COINS = gql`
 `;
 
 const HomePage: React.FC = () => {
-  const userId = 'user-id'; // replace with actual user ID
+  const userId = 'user-id'; 
   const { data, loading, error } = useQuery(GET_USER, { variables: { id: userId } });
   const [addCoins] = useMutation(ADD_COINS);
 
@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
   };
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <p className='bg-blue-500'>Error123: {error.message}</p>;
 
   return (
     <div className="container mx-auto text-center p-4">
